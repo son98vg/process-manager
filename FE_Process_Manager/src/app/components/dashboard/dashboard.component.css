@@ -1,0 +1,195 @@
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+h1{
+  font-size: 2rem;
+}
+
+h3{
+  font-size: 1.75rem;
+}
+
+.example-sidenav {
+  overflow: hidden;
+  background: #f1f5f7;
+  width: 300px;
+  height: auto;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border-right: 1px solid #EEEEEE;
+}
+
+.example-sidenav-content {
+  width: 100%;
+  overflow: auto;
+}
+
+.example-sidenav-content .header-content{
+  height: 60px;
+  background: #f1f5f7;
+  border-bottom: 1px solid #EEEEEE;
+}
+
+.example-sidenav-content .body-content{
+  
+}
+
+.button-sidebar{
+  float: left;
+  margin: 10px;
+}
+
+.button-nav-user{
+  float: right;
+  margin: 10px 25px 17px 0;
+}
+
+.button-nav-user:hover{
+  cursor: pointer;
+}
+
+.button-sidebar:hover{
+  cursor: pointer;
+}
+
+.web-logo {
+  height: 100px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+
+.list-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  padding-left: 5%;
+}
+
+.list-nav a {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  text-decoration: none;
+}
+
+.list-nav img {
+  width: 30px;
+  height: 30px;
+}
+
+.list-nav p {
+  font-size: 1.2rem;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.nav-item {
+  color: #999;
+  font-weight: bold;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0 0 15px 55px;
+}
+
+.copyright-div {
+  color: black;
+  text-align: center;
+}
+
+.viettel-logo {
+  margin-left: 27%;
+  margin-bottom: 10%;
+}
+
+.img-item-nav {
+  margin-right: 5%;
+}
+
+.active-link {
+  color: #333;
+  font-weight: bold;
+}
+
+button{
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 1500px) {
+  .example-sidenav {
+    width: 250px;
+  }
+
+  .footer {
+    padding: 0 0 15px 40px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .example-sidenav {
+    width: 220px;
+  }
+
+  .footer {
+    padding: 0 0 15px 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .example-sidenav {
+    width: 180px;
+  }
+
+  .web-logo {
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  .web-logo h1{
+    font-size: 1.6rem;
+  }
+
+  .web-logo h3{
+    font-size: 1.3rem;
+  }
+
+  .list-nav {
+    padding-top: 20px;
+  }
+
+  .list-nav img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .list-nav a {
+    height: 50px;
+  }
+
+  .list-nav p {
+    font-size: 0.75rem;
+    padding: 0;
+  }
+
+  .footer {
+    padding: 0 0 5px 30px;
+    font-size: 0.6rem;
+  }
+
+  .viettel-logo {
+    width: 50px;
+    margin-left: 25px;
+  }
+}

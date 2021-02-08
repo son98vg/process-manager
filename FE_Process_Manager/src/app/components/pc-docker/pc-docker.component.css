@@ -1,0 +1,48 @@
+h4{
+    padding: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.table-pc-docker{
+    width: 95%;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+}
+
+button{
+    outline: none;
+    border: none;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.btn-create{
+    height: 45px;
+    cursor: pointer;
+    float: right;
+}
+
+th{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+@media(max-width: 1000px){
+    *{
+        font-size: 0.75rem !important;
+    }
+
+    h4{
+        font-size: 1rem !important;
+    }
+}

@@ -1,0 +1,52 @@
+<div class="main-container">
+    <div class="example-sidenav">
+        <div class="web-logo">
+            <h1 style="font-weight: bold; text-transform: uppercase;">SERVER</h1>
+            <h3>Management</h3>
+        </div>
+        <div class="list-nav">
+            <a routerLink="process-management" class="nav-item" (click)="handleProcessItemClick()" [routerLinkActive]="'active-link'">
+                <img id="live-item" class="img-item-nav live-item" src="assets/images/icon-sidebar-1.svg" alt="demo" />
+                <p>Process Management</p>
+            </a>
+            <a routerLink="pc-docker" class="nav-item" (click)="handlePCAndDockerItemClick()" [routerLinkActive]="'active-link'">
+                <img id="pc-docker-item" class="img-item-nav live-item" src="assets/images/icon-sidebar-2.svg" alt="demo" />
+                <p>PC And Docker</p>
+            </a>
+        </div>
+        <div class="footer">
+            <img width="80px" class="viettel-logo" src="assets/images/Logo Viettel.svg" />
+            <div class="copyright-div">
+                <div>© 2020 Viettel Group.</div>
+                <div>All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="example-sidenav-content">
+        <div class="header-content">
+            <div class="button-sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-justify-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </div>
+            <div class="button-nav-user">
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>person_outline</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="logout()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                        </svg>
+                        <span style="margin-left: 7px;">Log out</span>
+                    </button>
+                </mat-menu>
+            </div>
+        </div>
+        <div class="body-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

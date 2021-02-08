@@ -1,0 +1,121 @@
+syntax = "proto3";
+
+package face;
+
+enum Result {
+    FAIL_IQA = 0;
+    FAIL_FACE = 1;
+    SUCCESS = 3;
+}
+
+message Face {
+    uint32 x = 1;
+    uint32 y = 2;
+    uint32 w = 3;
+    uint32 h = 4;
+    float prob = 5; // Detector prob
+    uint32 obj_id = 6; // Detector ID
+    uint32 track_id = 7; // Tracker ID
+    Result result = 8; // Extractor result
+    uint32 class_ = 9; // Classifier result
+    bytes feature = 10;
+    bytes image = 11;
+    float distance = 12; // Distance to feature in database
+    float time = 13; // Time taken to measure
+    uint32 image_id = 14;
+    uint32 frame_idx = 15;
+    float asp_score = 17;
+    uint32 history_id = 18;
+    uint32 cx = 19;
+    uint32 cy = 20;
+    repeated Face peers = 21;
+    string name = 22;
+}
+
+message Faces {
+    repeated Face faces = 1;
+}
+
+message AspFace {
+    bytes hsv_image = 1;
+    bytes rgb_image = 2;
+    uint32 history_id = 3;
+}
+message AspFaces {
+    repeated AspFace asp_faces = 1;
+}
+
+enum Command {
+    EXTRACT_IMAGES = 0;
+    EXTRACT_IMAGE = 1;
+    SEARCH_ONE = 2;
+    SEARCH_TOP = 3;
+    ADD_FEATURE = 4;
+    DELETE_FEATURE = 5;
+    DISPLAY_FACES = 6;
+    INSERT_SHORT = 7;
+    INSERT_LONG = 8;
+    INSERT_FAKE = 9;
+}
+
+message Request {
+    Command command = 1;
+    repeated Face faces = 2;
+    uint32 history_id = 3;
+    string video = 4;
+    repeated AspFace asp_faces = 5;
+}
+
+message Reply {
+    uint32 history_id = 1;
+    float asp_score = 2;
+}
+
+message Frame {
+    bytes frame = 1;
+    uint32 frame_idx = 2;
+}
+
+message FrameExt {
+    bytes frame = 1;
+    uint32 width = 2;
+    uint32 height = 3;
+    uint32 frame_idx = 4;
+}
+
+message FacesExt {
+    bytes frame = 1;
+    uint32 width = 2;
+    uint32 height = 3;
+    uint32 frame_idx = 4;
+    repeated Face faces = 5;
+}
+
+message GateMessage {
+    uint32 id = 1;
+    string ip = 2;
+    uint32 port = 3;
+    string code = 4;
+}
+
+enum GateStatus {
+    ACK = 0;
+    NAK = 1;
+}
+
+message GateReply {
+    GateStatus status = 1;
+}
+
+message ProcessStatus{
+    string ip_address = 1;
+    string container_id = 2;
+    string status = 3;
+    string cwd = 4;
+    string device_id = 5;
+    uint32 port_forward = 6;
+    uint32 pid = 7;
+    string run_commnand = 8;
+    string type = 9 ; 
+    string username = 10;
+}

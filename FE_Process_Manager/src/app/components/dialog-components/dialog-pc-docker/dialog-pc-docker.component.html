@@ -1,0 +1,58 @@
+<mat-card-header>
+    <mat-toolbar class="toolbar">
+        <mat-card-title>PC or Docker Information</mat-card-title>
+        <span class="toolbar-spacer"></span>
+    </mat-toolbar>
+</mat-card-header>
+<mat-card-content>
+    <div class="container">
+        <form [formGroup]="infoForm">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>IP</label>
+                        <input type="text" formControlName="ip" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>MAC Address</label>
+                        <input type="text" formControlName="mac" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Docker ID</label>
+                        <input type="number" formControlName="docker_id" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Docker Name</label>
+                        <input type="text" formControlName="docker_name" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Port Local</label>
+                        <input type="number" formControlName="port_local" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label>Port Forward</label>
+                        <input type="number" formControlName="port_forward" class="form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6 row" >
+                        <button class="btn btn-danger" (click)="onNoClick()">
+                            <mat-icon>cancel</mat-icon>
+                            <p>Cancel</p>
+                        </button>
+                        <button (click)="onSubmit()" class="btn btn-success">
+                            <mat-icon>save</mat-icon>
+                            <p>Save</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</mat-card-content>

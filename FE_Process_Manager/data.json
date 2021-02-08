@@ -1,0 +1,32 @@
+{
+  "process": [
+    {
+      "id": 1,
+      "ip": "192.168.0.122",
+      "mac": "00:11:82:DD:15",
+      "docker_container_name": "Docker 1",
+      "process_id": "5014",
+      "status": "Stop"
+    }
+  ],
+  "pc-docker-info": [
+    {
+      "id": 3,
+      "ip": "MGJDGJD",
+      "mac": "GJHFGH",
+      "docker_id": "FGHFGHF",
+      "docker_name": "RTYRYH",
+      "port_local": "THTR",
+      "port_forward": "FGHF"
+    },
+    {
+      "id": 4,
+      "ip": "dfhdhhd",
+      "mac": "fdgfdhgd",
+      "docker_id": "fhdhdjn",
+      "docker_name": "sdhfdh",
+      "port_local": "cvncvn",
+      "port_forward": "1212"
+    }
+  ]
+}
